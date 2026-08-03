@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOTORIUM | Автосервис премиум</title>
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Парящие частицы (фон) -->
+    <div class="particles-container" id="particles"></div>
+
+    <!-- Хедер с навигацией -->
+    <header class="header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                <i class="fas fa-car-side"></i>
+                <span>MOTORIUM</span>
+            </a>
+            <nav class="nav">
+                <a href="#services">Услуги</a>
+                <a href="#about">О нас</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+            <a href="#contact" class="btn-header">Записаться</a>
+            
+            <!-- Бургер-меню -->
+            <button class="burger-menu" id="burgerBtn" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Мобильная навигация -->
+    <div class="mobile-nav" id="mobileNav">
+        <!-- Кнопка закрытия (крестик) -->
+        <button class="mobile-close" id="mobileClose">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <div class="mobile-logo">
+            <i class="fas fa-car-side"></i>
+            MOTORIUM
+        </div>
+        <a href="index.html"><i class="fas fa-home"></i> Главная</a>
+        <a href="#services"><i class="fas fa-wrench"></i> Услуги</a>
+        <a href="#about"><i class="fas fa-info-circle"></i> О нас</a>
+        <a href="#reviews"><i class="fas fa-star"></i> Отзывы</a>
+        <a href="#contact"><i class="fas fa-phone-alt"></i> Контакты</a>
+        <a href="services.html"><i class="fas fa-list-ul"></i> Услуги и цены</a>
+        <a href="#contact" class="mobile-btn">
+            <i class="fas fa-calendar-check"></i> Записаться
+        </a>
+    </div>
+
+    <!-- Оверлей -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Главный герой (Hero) -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <span class="badge"><i class="fas fa-bolt"></i> Профессиональный ремонт</span>
+                <h1>Диагностика и ремонт <br /><span class="highlight">авто премиум</span> класса</h1>
+                <p>Мы возвращаем вашим автомобилям идеальное состояние. Оборудование последнего поколения, мастера с 10+ лет опыта.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary"><i class="fas fa-calendar-check"></i> Записаться</a>
+                    <a href="services.html" class="btn-outline">Наши услуги <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="hero-stats">
+                    <div><span>500+</span> авто отремонтировано</div>
+                    <div><span>98%</span> довольных клиентов</div>
+                    <div><span>24/7</span> поддержка</div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-car">
+                    <!-- Шина за карточками -->
+                    <div class="tire-bg"></div>
+                </div>
+                
+                <!-- Плавающие карточки с услугами (ссылки на страницу услуг) -->
+                <a href="services.html" class="floating-card card-1" data-rotation="-3">
+                    <div class="card-icon-wrapper">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Компьютерная</span>
+                        <span class="card-subtitle">диагностика</span>
+                    </div>
+                    <div class="card-glow"></div>
+                </a>
+                
+                <a href="services.html" class="floating-card card-2" data-rotation="2">
+                    <div class="card-icon-wrapper">
+                        <i class="fas fa-oil-can"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Замена</span>
+                        <span class="card-subtitle">масла</span>
+                    </div>
+                    <div class="card-glow"></div>
+                </a>
+                
+                <a href="services.html" class="floating-card card-3" data-rotation="4">
+                    <div class="card-icon-wrapper">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Чип-</span>
+                        <span class="card-subtitle">тюнинг</span>
+                    </div>
+                    <div class="card-glow"></div>
+                </a>
+
+                <a href="services.html" class="floating-card card-4" data-rotation="-2">
+                    <div class="card-icon-wrapper">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Развал-</span>
+                        <span class="card-subtitle">схождение</span>
+                    </div>
+                    <div class="card-glow"></div>
+                </a>
+
+                <a href="services.html" class="floating-card card-5" data-rotation="1">
+                    <div class="card-icon-wrapper">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Электрика</span>
+                        <span class="card-subtitle">и электроника</span>
+                    </div>
+                    <div class="card-glow"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-label">Что мы предлагаем</div>
+            <h2>Наши <span class="highlight">услуги</span></h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-microscope"></i></div>
+                    <h3>Компьютерная диагностика</h3>
+                    <p>Полная проверка всех систем авто за 15 минут с выдачей детального отчёта.</p>
+                    <a href="services.html" class="service-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Ремонт двигателя</h3>
+                    <p>Капитальный и текущий ремонт, замена ГРМ, поршневой группы любой сложности.</p>
+                    <a href="services.html" class="service-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-car-battery"></i></div>
+                    <h3>Электрика и электроника</h3>
+                    <p>Диагностика проводки, блоков управления, замена аккумуляторов и генераторов.</p>
+                    <a href="services.html" class="service-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
+                    <h3>Кузовной ремонт и покраска</h3>
+                    <p>Безупречное восстановление геометрии кузова, подбор цвета, полировка.</p>
+                    <a href="services.html" class="service-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section class="about" id="about">
+        <div class="container about-grid">
+            <div class="about-image">
+                <img src="images/onas.jpg" alt="Наша мастерская MOTORIUM" />
+            </div>
+            <div class="about-text">
+                <div class="section-label">О мастерской</div>
+                <h2>Мы — <span class="highlight">MOTORIUM</span></h2>
+                <p>Современный автосервис с душой. Мы любим машины и делаем всё, чтобы вы чувствовали себя уверенно за рулём. Используем только оригинальные запчасти и профессиональное оборудование.</p>
+                <ul class="about-list">
+                    <li><i class="fas fa-check-circle"></i> Гарантия на все виды работ до 2 лет</li>
+                    <li><i class="fas fa-check-circle"></i> Бесплатная диагностика при ремонте</li>
+                    <li><i class="fas fa-check-circle"></i> Онлайн-отчёт о ходе работ</li>
+                </ul>
+                <a href="#contact" class="btn-primary"><i class="fas fa-phone-alt"></i> Связаться</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы (слайдер) -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-label">Мнение клиентов</div>
+            <h2>Что говорят <span class="highlight">о нас</span></h2>
+            
+            <div class="reviews-slider" id="reviewsSlider">
+                <div class="reviews-slider-wrapper" id="sliderWrapper">
+                    <!-- Отзыв 1 -->
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Обращался с проблемой по двигателю. Сделали всё быстро и чётко, даже раньше срока. Теперь только сюда! Отличный сервис, рекомендую всем своим друзьям."</p>
+                        <div class="review-author">— Алексей, BMW X5</div>
+                    </div>
+                    
+                    <!-- Отзыв 2 -->
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Отличный сервис, вежливый персонал, сделали кузовной ремонт как из салона. Цены адекватные, качество на высоте. Обязательно приеду ещё!"</p>
+                        <div class="review-author">— Екатерина, Mercedes C-Class</div>
+                    </div>
+                    
+                    <!-- Отзыв 3 -->
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Профессионалы своего дела. Диагностика показала скрытые ошибки, которые другие не видели. Очень доволен результатом, теперь только к вам!"</p>
+                        <div class="review-author">— Дмитрий, Audi A6</div>
+                    </div>
+                    
+                    <!-- Отзыв 4 -->
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Очень понравился подход к клиентам. Всё объяснили, показали, что сломалось и почему. Сделали ремонт качественно и в срок. Спасибо команде MOTORIUM!"</p>
+                        <div class="review-author">— Михаил, Toyota Camry</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-controls">
+                <button class="slider-btn" id="prevReview"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn" id="nextReview"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <!-- Индикаторы точек -->
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+    </section>
+
+    <!-- Контакты и форма -->
+    <section class="contact" id="contact">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <div class="section-label">Свяжитесь с нами</div>
+                <h2>Запишитесь <span class="highlight">прямо сейчас</span></h2>
+                <p>Оставьте заявку, и мы перезвоним вам в течение 5 минут, чтобы подобрать удобное время.</p>
+                <ul>
+                    <li><i class="fas fa-map-pin"></i> Москва, ул. Автомобильная, 15</li>
+                    <li><i class="fas fa-phone-alt"></i> +7 (495) 777-33-22</li>
+                    <li><i class="fas fa-envelope"></i> info@motorium.ru</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <input type="text" placeholder="Ваше имя" required />
+                <input type="tel" placeholder="Телефон" required />
+                <input type="email" placeholder="Email (необязательно)" />
+                <textarea rows="4" placeholder="Сообщение (модель авто, проблема)"></textarea>
+                <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="text-decoration: none; display: flex; align-items: center; gap: 10px; font-family: var(--font-accent); font-weight: 700; font-size: 1.4rem; letter-spacing: 1px; color: #fff; margin-bottom: 12px;">
+                        <i class="fas fa-car-side" style="color: var(--primary); font-size: 1.6rem;"></i>
+                        <span>MOTORIUM</span>
+                    </a>
+                    <p>Профессиональный автосервис премиум-класса. Диагностика, ремонт, обслуживание автомобилей любых марок.</p>
+                    <div class="footer-badge">
+                        <i class="fas fa-shield-alt"></i> Гарантия до 2 лет
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Главная</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Услуги</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> О нас</a></li>
+                        <li><a href="#reviews"><i class="fas fa-chevron-right"></i> Отзывы</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Контакты</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Услуги и цены</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul class="footer-contacts">
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+74957773322">+7 (495) 777-33-22</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@motorium.ru">info@motorium.ru</a></li>
+                        <li><i class="fas fa-map-pin"></i> Москва, ул. Автомобильная, 15</li>
+                    </ul>
+                    <div class="footer-hours">
+                        <span><i class="far fa-clock"></i> Пн–Пт: 9:00 – 21:00</span>
+                        <span><i class="far fa-clock"></i> Сб–Вс: 10:00 – 18:00</span>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Записаться онлайн</h4>
+                    <p>Оставьте номер, и мы перезвоним за 5 минут</p>
+                    <form class="footer-form" id="footerForm">
+                        <input type="tel" placeholder="+7 (___) ___-__-__" required />
+                        <button type="submit" class="btn-primary btn-small">Отправить</button>
+                    </form>
+                    <div class="footer-payment">
+                        <i class="fas fa-credit-card"></i>
+                        <i class="fas fa-wallet"></i>
+                        <span>Наличные, карты, безнал</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 MOTORIUM. Все права защищены.</p>
+                <div class="footer-legal">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
